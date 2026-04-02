@@ -59,7 +59,7 @@ The next issue encountered in the dataset was the presence of strong background 
 As a result, noise reduction became necessary to enhance the quality of the signal before training. By cleaning the audio and preserving the important section of the waveform, the model is better able to learn the relevant acoustic patterns, leading to more effective and reliable classification.
 
 <p align="center">
-<img width="1066" height="691" alt="image" src="https://github.com/user-attachments/assets/6cd42ae1-9a2e-4461-acbe-8c66e593ec77" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/6cd42ae1-9a2e-4461-acbe-8c66e593ec77" />
 </p>
 After noise reduction was applied, the changes in the waveform became much clearer in both the time-domain representation and the spectrogram. In the time-domain plot, the signal appeared cleaner and more focused, with less interference from unwanted background noise. Similarly, in the spectrogram, the red regions became more concentrated and better defined in specific areas, rather than being spread broadly across the image as seen previously.
 
