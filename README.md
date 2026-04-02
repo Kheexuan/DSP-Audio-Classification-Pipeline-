@@ -67,9 +67,16 @@ This suggests that the noise reduction process was able to suppress a large port
 
 
 # Features Extraction
-| Name | Role | Year |
+https://librosa.org/doc/latest/feature.html
+Below are some of the functions available in librosa, arranged to support the decision-making process on which features should be extracted.
+
+| Types Of Extraction | Design | Selected |
 |------|------|------|
-| John | Leader | 2024 |
-| Mary | Member | 2025 |
+| Melspectrogram | Emphasis On Human Hearing  | Not Selected |
+| MFCC | Easy for Machine Learning | Selected |
+| Spectral Contrast | Emphasis Energy Difference | Selected |
+| Spectral Centroid | Speading in Spectrum | Selected |
+
+
 
 # Comparison Between Models
