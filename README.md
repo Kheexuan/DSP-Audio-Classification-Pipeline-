@@ -48,7 +48,9 @@ By testing different samples with varying sound patterns, it became possible to 
 <p align="center">
 <img width="600"  alt="image" src="https://github.com/user-attachments/assets/5ca708eb-b188-42d4-ae72-0931575da167" />
 </p>
-The optimal threshold that was identified was around 33 dB. At this level, the signal was no longer excessively long or filled with very low-volume regions, while most of the important parts of the audio were still preserved. This provided a good balance between removing unnecessary silence and retaining meaningful sound information. As a result, the trimmed audio was reduced to around 2.5 seconds compared to the original 5-second clip, making the sample more compact while still capturing the key features needed for classification.
+The optimal threshold that was identified was around 33 dB. At this level, the signal was no longer excessively long or filled with very low-volume regions, while most of the important parts of the audio were still preserved. This provided a good balance between removing unnecessary silence and retaining meaningful sound information. As a result, the trimmed audio was reduced to around 2.5 seconds compared to the original 5-second clip, making the sample more compact while still capturing the key features needed for classification as seen from the above image.
+
+The next issue to deal with in the dataset was the overpowering background noise which would heavily affect the data extraction, as it can be seen as a feature or not even be able to classify it at all
 
 
 
