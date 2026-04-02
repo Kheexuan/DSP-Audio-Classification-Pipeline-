@@ -10,7 +10,7 @@ In order to process the data effectively, the first and most crucial step is to 
 The first issue identified is the presence of empty spaces in the audio data. These silent sections not only increase the training duration by introducing unnecessary data, but may also be interpreted by the model as meaningful information, which can negatively affect its learning performance.
 
 
-## Data Processing and Comparison
+# Data Processing and Comparison
 
 
 # Features Extraction
