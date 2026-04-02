@@ -68,6 +68,7 @@ This suggests that the noise reduction process was able to suppress a large port
 
 # Features Extraction
 https://librosa.org/doc/latest/feature.html
+
 Below are some of the functions available in librosa, arranged to support the decision-making process on which features should be extracted.
 
 | Types Of Extraction | Design | Selected |
@@ -76,6 +77,12 @@ Below are some of the functions available in librosa, arranged to support the de
 | MFCC | Easy for Machine Learning | Selected |
 | Spectral Contrast | Emphasis Energy Difference | Selected |
 | Spectral Centroid | Speading in Spectrum | Selected |
+| Spectral Bandwidth | Emphasis Spreading in Spectrum | Selected |
+| Spectral Rolloff | Below What Frequency does Most Energy  | Selected |
+| Spectral Flatness | Sound more noisy or tone  | Selected |
+| Zero_Crossing | Times the signal crosses zero  | Selected |
+| Root Mean Square | Audip Segmentation  | Selected |
+
 
 
 
