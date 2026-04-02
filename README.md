@@ -85,7 +85,7 @@ Below are some of the functions available in librosa, arranged to support the de
 | Zero_Crossing | Times the signal crosses zero  | Selected |
 | Root Mean Square | Audio Segmentation  | Selected |
 
-##Mel Spectrogram:
+## Mel Spectrogram:
 <p align="center">
 <img width="355" height="252" alt="image" src="https://github.com/user-attachments/assets/0e146764-fcc9-4a4f-a46a-abd58be5b3ae" />
 </p>
