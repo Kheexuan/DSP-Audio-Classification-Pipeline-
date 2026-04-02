@@ -15,6 +15,10 @@ The first issue identified is the presence of empty spaces in the audio data. Th
 
 The second issue identified was the presence of noise within the dataset. In many of the audio samples, the meaningful signal was concentrated only within a short duration, for the example wave the its approximately 1.2 to 1.8 seconds, while the remaining portions of the waveform were largely filled with white noise. This means that a significant part of each audio clip did not contain useful information for the classification task. As a result, the extracted features may be influenced by irrelevant noise rather than the actual signal of interest, which can reduce the model’s ability to learn accurate and discriminative patterns.
 
+<p align="center">
+<img width="430" alt="image" src="https://github.com/user-attachments/assets/78416ef9-dd5b-4f0e-899f-965b33758c8c" />
+</p>
+
 # Data Processing and Comparison
 
 
