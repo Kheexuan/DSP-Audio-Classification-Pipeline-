@@ -50,10 +50,13 @@ By testing different samples with varying sound patterns, it became possible to 
 </p>
 The optimal threshold that was identified was around 33 dB. At this level, the signal was no longer excessively long or filled with very low-volume regions, while most of the important parts of the audio were still preserved. This provided a good balance between removing unnecessary silence and retaining meaningful sound information. As a result, the trimmed audio was reduced to around 2.5 seconds compared to the original 5-second clip, making the sample more compact while still capturing the key features needed for classification as seen from the above image.
 
-The next issue to deal with in the dataset was the overpowering background noise which would heavily affect the data extraction, as it can be seen as a feature or not even be able to classify it at all
+<p align="center">
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/cafd193f-701f-454f-8afd-851bc32555a4" />
+</p>
 
+The next issue encountered in the dataset was the presence of strong background noise, which could heavily affect the feature extraction process and reduce classification performance. Such noise may be incorrectly learned by the model as a meaningful feature, or it may mask the actual signal to the extent that accurate classification becomes difficult. In many cases, only the middle portion of the waveform contained the relevant audio information, while the surrounding regions were largely dominated by unwanted noise.
 
-
+As a result, noise reduction became necessary to enhance the quality of the signal before training. By cleaning the audio and preserving the important section of the waveform, the model is better able to learn the relevant acoustic patterns, leading to more effective and reliable classification.
 
 # Features Extraction
 
