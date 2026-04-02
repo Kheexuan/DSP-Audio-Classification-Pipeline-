@@ -23,10 +23,22 @@ Lastly, the waveform introduces a broader classification challenge due to the na
 This means that standard noise suppression techniques used in other audio domains may not be directly suitable, since they risk removing features that are essential for classification. As a result, the preprocessing strategy must be carefully adapted to the task so that irrelevant background interference is reduced without compromising the meaningful acoustic properties of the motor sound.
 
 # Date Processing
-## Technique Used
-Resampling 
+The audio first needs to be resampled to 16 kHz. This is an important step because it ensures that all audio samples are represented using the same sampling rate and follow a consistent structure, which makes them easier to process, compare, and analyse. If the audio files have different sampling rates, the same sound may be represented differently across samples, which can introduce inconsistency into the dataset and affect the reliability of later processing steps.
 
-## Validation
+
+<p align="center">
+<img width="430" alt="image" src="https://github.com/user-attachments/assets/f7b42700-809c-4917-b128-1fd8d1e2d323" />
+</p>
+
+Next, the issue of empty durations within the audio signal was addressed. In some samples, such as dog sounds or fireworks, there were silent or low-energy sections before, after, or between the actual sound events. To handle this, a silence trimming technique was used to remove these unnecessary gaps and retain only the more relevant portions of the signal.
+This step is important because the empty sections do not contain useful information for the classification task, yet they increase the length of the audio and may introduce inconsistency across samples. By trimming these silent regions, the input becomes more focused on the actual sound of interest. As a result, the model is more likely to learn meaningful acoustic patterns rather than being influenced by uninformative empty spaces. This can improve both the efficiency of training and the overall quality of the learned representation.
+
+Setting of cutoff frequency is critical here, as we do not want to accidentally cutoff details from the signal that is lower in volume but also do not want to expose too much of those signicantly lower signal through to the later stage of training. 
+
+
+
+
+
 # Features Extraction
 
 # Comparison Between Models
