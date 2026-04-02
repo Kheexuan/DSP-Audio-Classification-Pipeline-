@@ -54,7 +54,7 @@ The optimal threshold that was identified was around 33 dB. At this level, the s
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/cafd193f-701f-454f-8afd-851bc32555a4" />
 </p>
 
-The next issue encountered in the dataset was the presence of strong background noise, which could heavily affect the feature extraction process and reduce classification performance. Such noise may be incorrectly learned by the model as a meaningful feature, or it may mask the actual signal to the extent that accurate classification becomes difficult. In many cases, only the middle portion of the waveform contained the relevant audio information, while the surrounding regions were largely dominated by unwanted noise.
+The next issue encountered in the dataset was the presence of strong background noise as seen on the iamge above, which could heavily affect the feature extraction process and reduce classification performance. Such noise may be incorrectly learned by the model as a meaningful feature, or it may mask the actual signal to the extent that accurate classification becomes difficult. In many cases, only the middle portion of the waveform contained the relevant audio information, while the surrounding regions were largely dominated by unwanted noise.
 
 As a result, noise reduction became necessary to enhance the quality of the signal before training. By cleaning the audio and preserving the important section of the waveform, the model is better able to learn the relevant acoustic patterns, leading to more effective and reliable classification.
 
