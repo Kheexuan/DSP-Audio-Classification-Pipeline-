@@ -18,9 +18,9 @@ The second issue identified was the presence of noise within the dataset. In man
 <p align="center">
 <img width="430" alt="image" src="https://github.com/user-attachments/assets/78416ef9-dd5b-4f0e-899f-965b33758c8c" />
 </p>
+Lastly, the waveform introduces a broader classification challenge due to the nature of the sounds it contains. In the example above, the audio sample consists of motor sounds. In typical audio processing tasks, particularly in speech recognition, such sounds are often regarded as noise and are commonly suppressed during preprocessing. However, in this classification task, the same treatment cannot be applied, as the motor sound is not noise but the key signal that must be analysed.
 
-# Data Processing and Comparison
-
+This means that standard noise suppression techniques used in other audio domains may not be directly suitable, since they risk removing features that are essential for classification. As a result, the preprocessing strategy must be carefully adapted to the task so that irrelevant background interference is reduced without compromising the meaningful acoustic properties of the motor sound.
 
 # Features Extraction
 
