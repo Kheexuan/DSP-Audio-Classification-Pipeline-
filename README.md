@@ -81,7 +81,7 @@ Below are some of the functions available in librosa, arranged to support the de
 | Spectral Rolloff | Below What Frequency does Most Energy  | Selected |
 | Spectral Flatness | Sound more noisy or tone  | Selected |
 | Zero_Crossing | Times the signal crosses zero  | Selected |
-| Root Mean Square | Audip Segmentation  | Selected |
+| Root Mean Square | Audio Segmentation  | Selected |
 
 
 
