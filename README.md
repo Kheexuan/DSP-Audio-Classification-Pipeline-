@@ -67,5 +67,9 @@ This suggests that the noise reduction process was able to suppress a large port
 
 
 # Features Extraction
+| Name | Role | Year |
+|------|------|------|
+| John | Leader | 2024 |
+| Mary | Member | 2025 |
 
 # Comparison Between Models
