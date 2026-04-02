@@ -38,6 +38,17 @@ However, a key difficulty lies in determining the appropriate threshold for sile
 
 As a result, the cut-off value must be selected carefully to achieve a balance between removing irrelevant silence and preserving important signal details. This highlights that silence trimming, while beneficial, must be adapted to the characteristics of the dataset to avoid negatively affecting model performance.
 
+To determine a suitable threshold, the approach was to test the trimming method across a wider range of selected audio samples. One example was the fireworks audio, where the signal did not end immediately after the initial loud burst. Instead, the first pop was strong and was followed by a gradually fading sound. This decaying portion of the signal could also contain useful features for classification and therefore should not be removed too aggressively.
+
+<p align="center">
+<img width="600"  alt="image" src="https://github.com/user-attachments/assets/c923996a-0778-42f2-b7a0-1d18c08ab3fd" />
+</p>
+By testing different samples with varying sound patterns, it became possible to evaluate how the trimming threshold affected both the louder and softer parts of the signal. This was necessary in order to strike a balance between removing unnecessary silent regions and preserving the meaningful details of the audio, including weaker but still relevant components that occur after the main sound event. In the example above, the trimming threshold was set too aggressively, causing the cut to be too tight and capturing only a very short 0.5-second portion of the reverberation. As a result, part of the natural decay of the sound, which may contain useful information for classification, was lost.
+
+<p align="center">
+<img width="600"  alt="image" src="https://github.com/user-attachments/assets/5ca708eb-b188-42d4-ae72-0931575da167" />
+</p>
+The optimal threshold that was identified was around 33 dB. At this level, the signal was no longer excessively long or filled with very low-volume regions, while most of the important parts of the audio were still preserved. This provided a good balance between removing unnecessary silence and retaining meaningful sound information. As a result, the trimmed audio was reduced to around 2.5 seconds compared to the original 5-second clip, making the sample more compact while still capturing the key features needed for classification.
 
 
 # Features Extraction
