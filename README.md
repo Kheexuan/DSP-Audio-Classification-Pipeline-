@@ -85,10 +85,11 @@ Below are some of the functions available in librosa, arranged to support the de
 | Zero_Crossing | Times the signal crosses zero  | Selected |
 | Root Mean Square | Audio Segmentation  | Selected |
 
-Mel Spectrogram:
+##Mel Spectrogram:
 <p align="center">
 <img width="355" height="252" alt="image" src="https://github.com/user-attachments/assets/0e146764-fcc9-4a4f-a46a-abd58be5b3ae" />
 </p>
+
 Mel spectrogram was not selected mainly because it is designed to emphasise sound in a way that is more closely aligned with human hearing. While this is highly useful for speech and voice-related tasks, the audio data in this project was not speech-based. Instead, some of the sounds contained important information in slightly higher frequency ranges.
 
 Based on the graphs above,it was noted that from around 4 to 6 kHz onwards, the frequency details in the Mel spectrogram became more compressed compared to a normal spectrogram. This compression reduces the resolution of the higher-frequency components, which may cause useful details to be less visible or less distinguishable. Since those higher-frequency regions could contain important features for classification, using a normal spectrogram was considered more suitable, as it preserves the frequency information more directly without reshaping it according to human auditory perception.
