@@ -31,11 +31,12 @@ The audio first needs to be resampled to 16 kHz. This is an important step becau
 </p>
 
 Next, the issue of empty durations within the audio signal was addressed. In some samples, such as dog sounds or fireworks, there were silent or low-energy sections before, after, or between the actual sound events. To handle this, a silence trimming technique was used to remove these unnecessary gaps and retain only the more relevant portions of the signal.
+
 This step is important because the empty sections do not contain useful information for the classification task, yet they increase the length of the audio and may introduce inconsistency across samples. By trimming these silent regions, the input becomes more focused on the actual sound of interest. As a result, the model is more likely to learn meaningful acoustic patterns rather than being influenced by uninformative empty spaces. This can improve both the efficiency of training and the overall quality of the learned representation.
 
-Setting of cutoff frequency is critical here, as we do not want to accidentally cutoff details from the signal that is lower in volume but also do not want to expose too much of those signicantly lower signal through to the later stage of training. 
+However, a key difficulty lies in determining the appropriate threshold for silence trimming. Setting the decibel cut-off too high may lead to the removal of weaker yet meaningful parts of the signal, thereby discarding useful acoustic information required for classification. Conversely, setting the threshold too low would allow unnecessary silent or low-energy regions to remain, which limits the effectiveness of the trimming process.
 
-
+As a result, the cut-off value must be selected carefully to achieve a balance between removing irrelevant silence and preserving important signal details. This highlights that silence trimming, while beneficial, must be adapted to the characteristics of the dataset to avoid negatively affecting model performance.
 
 
 
