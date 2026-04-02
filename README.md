@@ -23,7 +23,10 @@ Lastly, the waveform introduces a broader classification challenge due to the na
 This means that standard noise suppression techniques used in other audio domains may not be directly suitable, since they risk removing features that are essential for classification. As a result, the preprocessing strategy must be carefully adapted to the task so that irrelevant background interference is reduced without compromising the meaningful acoustic properties of the motor sound.
 
 # Date Processing
+## Technique Used
+Resampling 
 
+## Validation
 # Features Extraction
 
 # Comparison Between Models
