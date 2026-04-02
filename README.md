@@ -5,7 +5,7 @@ The objective of this project is to develop and set up a complete audio classifi
 In order to process the data effectively, the first and most crucial step is to develop a thorough understanding of the data itself. Before any preprocessing, feature extraction, or modelling can be carried out, it is important to examine the nature of the data, its structure, its quality, and the patterns it contains.
 
 <p align="center">
-  <img width="213" alt="image" src="https://github.com/user-attachments/assets/4cd0b230-4139-4bdf-8572-c3bdbdc1608c" />
+  <img width="430" alt="image" src="https://github.com/user-attachments/assets/4cd0b230-4139-4bdf-8572-c3bdbdc1608c" />
 </p>
 
 
