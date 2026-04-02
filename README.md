@@ -51,6 +51,8 @@ By testing different samples with varying sound patterns, it became possible to 
 The optimal threshold that was identified was around 33 dB. At this level, the signal was no longer excessively long or filled with very low-volume regions, while most of the important parts of the audio were still preserved. This provided a good balance between removing unnecessary silence and retaining meaningful sound information. As a result, the trimmed audio was reduced to around 2.5 seconds compared to the original 5-second clip, making the sample more compact while still capturing the key features needed for classification.
 
 
+
+
 # Features Extraction
 
 # Comparison Between Models
