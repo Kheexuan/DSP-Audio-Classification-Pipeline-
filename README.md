@@ -180,8 +180,19 @@ The extracted features were tested on three different models: Support Vector Mac
 SVM did not perform very well with the extracted features with F1 accuracy of only 0.35
 
 ## Logistic Regression
-
+<p align="center">
+<img width="378" height="843" alt="image" src="https://github.com/user-attachments/assets/50e2d45e-ebbc-4f4d-9587-69a2f0b9ad5f" />
+</p>
+ Logistic Regression was decently with the extracted features with F1 accuracy of 0.674
+ 
 ## Random Forest
+<p align="center">
+<img width="317" height="70" alt="image" src="https://github.com/user-attachments/assets/ddb20e7d-4071-435f-b64f-a0dca034975d" />
+</p>
+
+Random Forest perform fairly decent as well with an F1 accuracy of 0.592
+
+## Result Conclusion
 
 # Configuration and Settings
 # Conclusion
