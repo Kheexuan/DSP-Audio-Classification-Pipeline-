@@ -195,5 +195,4 @@ Random Forest also performed fairly well with the extracted features, achieving 
 ## Result Conclusion
 Overall, Logistic Regression performed best because the extracted features were likely already strong enough to separate the audio classes without needing a highly complex model. Although the dataset contained diverse sounds such as engine motors, laughter, clapping, animal sounds, bottle opening, and helicopters, the feature extraction process appears to have captured the key differences between these categories effectively. As a result, Logistic Regression was able to learn the main patterns in the data and classify them more successfully than the other models.
 
-# Configuration and Settings
 # Conclusion
