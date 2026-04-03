@@ -68,7 +68,7 @@ After noise reduction was applied, the changes in the waveform became much clear
 This suggests that the noise reduction process was able to suppress a large portion of the irrelevant background noise while preserving the more meaningful components of the signal. In the earlier image, the red patches covered a much wider area, indicating that energy was dispersed more broadly and was likely influenced by noise. After preprocessing, the clearer and more localised red regions show that the important sound features became more distinguishable, which is beneficial for feature extraction and subsequent model training.
 
 # Additional Processing
-This chapter was developed as additional findings emerged throughout the process, particularly when the model’s validation results were obtained, as well as fine tuning.
+This chapter was developed as additional findings emerged throughout the process, particularly when the model’s validation results were obtained.
 
 <p align="center">
 <img width="554" height="697" alt="image" src="https://github.com/user-attachments/assets/30da5204-ee9c-4837-9459-9d36def4e845" />
