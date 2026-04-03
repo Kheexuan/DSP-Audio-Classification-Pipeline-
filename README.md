@@ -172,11 +172,16 @@ The extracted features were tested on three different models: Support Vector Mac
 | Support Vector Machine (SVM) | Works well with high-dimensional data such as extracted features. Effective for classification tasks with clear class boundaries.  | Can be slow to train on large datasets. Choosing the right kernel and parameters can be difficult |
 | Logistic Regression | Simple and Fast model to train. | Can be less accurate than more advanced models on complicated datasets |
 | Log Spectrogram | Handles non-linear relationships well. Works effectively with complex datasets  | Can be slower than Logistic Regression, especially with many trees.May require more computational resources |
-|------|------|------|
-| Log Melspectrogram | Emphasis On Human Hearing  | Not Selected |
 
+## SVM Results
+<p align="center">
+<img width="382" height="825" alt="image" src="https://github.com/user-attachments/assets/68a5f1cd-0244-4823-91f6-4a07dc01dca6" />
+</p>
+SVM did not perform very well with the extracted features with F1 accuracy of only 0.35
 
-## SVM
+## Logistic Regression
+
+## Random Forest
 
 # Configuration and Settings
 # Conclusion
