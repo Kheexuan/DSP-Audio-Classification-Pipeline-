@@ -76,6 +76,9 @@ After noise reduction was applied, the changes in the waveform became much clear
 
 This suggests that the noise reduction process was able to suppress a large portion of the irrelevant background noise while preserving the more meaningful components of the signal. In the earlier image, the red patches covered a much wider area, indicating that energy was dispersed more broadly and was likely influenced by noise. After preprocessing, the clearer and more localised red regions show that the important sound features became more distinguishable, which is beneficial for feature extraction and subsequent model training.
 
+## Noisy Like Audio Processing
+For noise reduction to be more effective, it was necessary to distinguish between ordinary background noise and actual noise-like audio classes. The idea was that sounds such as motors or other consistent mechanical sources, which contain more stable frequency components, would have lower spectral flatness than sounds with more dynamic and varying audio content. Based on that analogy, noise reduction was applied only yo audio samples with low flatness values, as there were more likely to represent steady , noise like rather than irregular or complex audio.
+
 # Additional Processing
 This chapter was developed as additional findings emerged throughout the process, particularly when the model’s validation results were obtained.
 
