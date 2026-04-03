@@ -113,7 +113,7 @@ In addition, most of the energy remains concentrated in the lower frequency rang
 <p align="center">
 <img width="350" height="672" alt="image" src="https://github.com/user-attachments/assets/5816ac08-db20-41f5-b0c0-22eda687ea69" />
 </p>
-After these characteristics were identified, a low-pass filter was implemented to focus on frequencies below 1000 Hz, together with a threshold of 0.6 and a spectral flatness condition of less than 0.005. As shown in the figure above, this led to a significant improvement in both readings, as the system was now able to identify the sound correctly, whereas previously it had failed to detect it. This suggests that constraining the analysis to the lower-frequency region and applying stricter flatness-based conditions helped the model better capture the acoustic properties of this sound type.
+After these characteristics were identified, a low-pass filter was implemented to focus on frequencies below 1000 Hz, together with a threshold of 0.5 and a spectral flatness condition of less than 0.005. As shown in the figure above, this led to a significant improvement in both readings, as the system was now able to identify the sound correctly, whereas previously it had failed to detect it. This suggests that constraining the analysis to the lower-frequency region and applying stricter flatness-based conditions helped the model better capture the acoustic properties of this sound type.
 
 # Features Extraction
 https://librosa.org/doc/latest/feature.html
