@@ -71,8 +71,23 @@ This suggests that the noise reduction process was able to suppress a large port
 This chapter was developed as additional findings emerged throughout the process, particularly when the model’s validation results were obtained, as well as fine tuning.
 
 <p align="center">
-<img width="370" height="600" alt="image" src="https://github.com/user-attachments/assets/7fb78bab-3792-43df-bafb-1e0c7bed9d7c" />
+<img width="554" height="697" alt="image" src="https://github.com/user-attachments/assets/30da5204-ee9c-4837-9459-9d36def4e845" />
 </p>
+It was observed that the system was unable to detect airplane and helicopter sounds effectively. These sound types are generally more noise-like and less structured than other audio classes, which may make them harder for the model to distinguish. This limitation led to further investigation into the characteristics of these sound categories in order to better understand why the model struggled and whether different features or approaches were needed to represent them more accurately.
+
+<p align="center">
+<img width="789" height="433" alt="image" src="https://github.com/user-attachments/assets/85eadbc6-d646-4ffe-ac32-5262bc47cd5c" />
+</p>
+To better understand the audio, examining only the spectrogram and time-domain waveform was not sufficient, as these representations did not reveal a very clear distinguishing characteristic for this type of sound. This is because most of the frequency range tends to be activated, making the audio appear broad and noise-like rather than showing a distinct pattern.
+
+To address this, key audio features were extracted for further analysis. From this, it was observed that such sounds typically exhibit very low spectral flatness values, often below 0.01, and are mainly concentrated in the lower frequency range of approximately 0 to 600 Hz, as shown in the figure above.
+
+<p align="center">
+<img width="1243" height="484" alt="image" src="https://github.com/user-attachments/assets/cff048bc-7d25-48e1-bdb6-53da3a3a86c4" />
+</p>
+To confirm the analysis, the same observations were examined across both helicopter and hand saw audio samples, as these sound types also exhibit relatively noisy characteristics. As shown in the figure above, the pattern remains generally consistent for both classes: the spectral flatness stays low, typically below 0.1, although it is still slightly higher than that of aeroplane sounds. 
+
+In addition, most of the energy remains concentrated in the lower frequency range, with only a few higher frequency outliers. This suggests that these noisy sound classes share similar low-frequency and low-flatness characteristics, even though the exact distribution may vary slightly between them.
 
 
 # Features Extraction
