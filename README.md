@@ -28,7 +28,7 @@ The second issue identified was the presence of noise within the dataset. In man
 </p>
 Lastly, the waveform introduces a broader classification challenge due to the nature of the sounds it contains. In the example above, the audio sample consists of motor sounds. In typical audio processing tasks, particularly in speech recognition, such sounds are often regarded as noise and are commonly suppressed during preprocessing. However, in this classification task, the same treatment cannot be applied, as the motor sound is not noise but the key signal that must be analysed.
 
-This means that standard noise suppression techniques used in other audio domains may not be directly suitable, since they risk removing features that are essential for classification. As a result, the preprocessing strategy must be carefully adapted to the task so that irrelevant background interference is reduced without compromising the meaningful acoustic properties of the motor sound.
+This means that standard noise suppression techniques used in other audio domains may not be directly suitable, since they risk removing features that are essential for classification. As a result, the preprocessing strategy must be carefully adapted to the task so that irrelevant background interference is reduced without compromising the meaningful audio properties of the motor sound.
 
 # Date Processing
 ## Audio Resampling
@@ -42,9 +42,9 @@ The audio first needs to be resampled to 16 kHz. This is an important step becau
 
 Next, the issue of empty durations within the audio signal was addressed. In some samples, such as dog sounds or fireworks, there were silent or low-energy sections before, after, or between the actual sound events. To handle this, a silence trimming technique was used to remove these unnecessary gaps and retain only the more relevant portions of the signal.
 
-This step is important because the empty sections do not contain useful information for the classification task, yet they increase the length of the audio and may introduce inconsistency across samples. By trimming these silent regions, the input becomes more focused on the actual sound of interest. As a result, the model is more likely to learn meaningful acoustic patterns rather than being influenced by uninformative empty spaces. This can improve both the efficiency of training and the overall quality of the learned representation.
+This step is important because the empty sections do not contain useful information for the classification task, yet they increase the length of the audio and may introduce inconsistency across samples. By trimming these silent regions, the input becomes more focused on the actual sound of interest. As a result, the model is more likely to learn meaningful audio patterns rather than being influenced by uninformative empty spaces. This can improve both the efficiency of training and the overall quality of the learned representation.
 
-However, a key difficulty lies in determining the appropriate threshold for silence trimming. Setting the decibel cut-off too high may lead to the removal of weaker yet meaningful parts of the signal, thereby discarding useful acoustic information required for classification. Conversely, setting the threshold too low would allow unnecessary silent or low-energy regions to remain, which limits the effectiveness of the trimming process.
+However, a key difficulty lies in determining the appropriate threshold for silence trimming. Setting the decibel cut-off too high may lead to the removal of weaker yet meaningful parts of the signal, thereby discarding useful audio information required for classification. Conversely, setting the threshold too low would allow unnecessary silent or low-energy regions to remain, which limits the effectiveness of the trimming process.
 
 As a result, the cut-off value must be selected carefully to achieve a balance between removing irrelevant silence and preserving important signal details. This highlights that silence trimming, while beneficial, must be adapted to the characteristics of the dataset to avoid negatively affecting model performance.
 
@@ -67,7 +67,7 @@ The optimal threshold that was identified was around 33 dB. At this level, the s
 
 The next issue encountered in the dataset was the presence of strong background noise as seen on the iamge above, which could heavily affect the feature extraction process and reduce classification performance. Such noise may be incorrectly learned by the model as a meaningful feature, or it may mask the actual signal to the extent that accurate classification becomes difficult. In many cases, only the middle portion of the waveform contained the relevant audio information, while the surrounding regions were largely dominated by unwanted noise.
 
-As a result, noise reduction became necessary to enhance the quality of the signal before training. By cleaning the audio and preserving the important section of the waveform, the model is better able to learn the relevant acoustic patterns, leading to more effective and reliable classification.
+As a result, noise reduction became necessary to enhance the quality of the signal before training. By cleaning the audio and preserving the important section of the waveform, the model is better able to learn the relevant audio patterns, leading to more effective and reliable classification.
 
 
 <p align="center">
@@ -113,7 +113,7 @@ In addition, most of the energy remains concentrated in the lower frequency rang
 <p align="center">
 <img width="350" height="672" alt="image" src="https://github.com/user-attachments/assets/5816ac08-db20-41f5-b0c0-22eda687ea69" />
 </p>
-After these characteristics were identified, a low-pass filter was implemented to focus on frequencies below 1000 Hz, together with a threshold of 0.5 and a spectral flatness condition of less than 0.005. As shown in the figure above, this led to a significant improvement in both readings, as the system was now able to identify the sound correctly, whereas previously it had failed to detect it. This suggests that constraining the analysis to the lower-frequency region and applying stricter flatness-based conditions helped the model better capture the acoustic properties of this sound type.
+After these characteristics were identified, a low-pass filter was implemented to focus on frequencies below 1000 Hz, together with a threshold of 0.5 and a spectral flatness condition of less than 0.005. As shown in the figure above, this led to a significant improvement in both readings, as the system was now able to identify the sound correctly, whereas previously it had failed to detect it. This suggests that constraining the analysis to the lower-frequency region and applying stricter flatness-based conditions helped the model better capture the audio properties of this sound type.
 
 # Features Extraction
 https://librosa.org/doc/latest/feature.html
