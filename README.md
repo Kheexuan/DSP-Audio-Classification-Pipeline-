@@ -25,6 +25,7 @@ Lastly, the waveform introduces a broader classification challenge due to the na
 This means that standard noise suppression techniques used in other audio domains may not be directly suitable, since they risk removing features that are essential for classification. As a result, the preprocessing strategy must be carefully adapted to the task so that irrelevant background interference is reduced without compromising the meaningful acoustic properties of the motor sound.
 
 # Date Processing
+## Audio Resampling
 The audio first needs to be resampled to 16 kHz. This is an important step because it ensures that all audio samples are represented using the same sampling rate and follow a consistent structure, which makes them easier to process, compare, and analyse. If the audio files have different sampling rates, the same sound may be represented differently across samples, which can introduce inconsistency into the dataset and affect the reliability of later processing steps.
 
 
@@ -32,6 +33,7 @@ The audio first needs to be resampled to 16 kHz. This is an important step becau
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/f7b42700-809c-4917-b128-1fd8d1e2d323" />
 </p>
 
+## Trim Silence
 Next, the issue of empty durations within the audio signal was addressed. In some samples, such as dog sounds or fireworks, there were silent or low-energy sections before, after, or between the actual sound events. To handle this, a silence trimming technique was used to remove these unnecessary gaps and retain only the more relevant portions of the signal.
 
 This step is important because the empty sections do not contain useful information for the classification task, yet they increase the length of the audio and may introduce inconsistency across samples. By trimming these silent regions, the input becomes more focused on the actual sound of interest. As a result, the model is more likely to learn meaningful acoustic patterns rather than being influenced by uninformative empty spaces. This can improve both the efficiency of training and the overall quality of the learned representation.
@@ -52,6 +54,7 @@ By testing different samples with varying sound patterns, it became possible to 
 </p>
 The optimal threshold that was identified was around 33 dB. At this level, the signal was no longer excessively long or filled with very low-volume regions, while most of the important parts of the audio were still preserved. This provided a good balance between removing unnecessary silence and retaining meaningful sound information. As a result, the trimmed audio was reduced to around 2.5 seconds compared to the original 5-second clip, making the sample more compact while still capturing the key features needed for classification as seen from the above image.
 
+## Noise Reduction
 <p align="center">
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/cafd193f-701f-454f-8afd-851bc32555a4" />
 </p>
