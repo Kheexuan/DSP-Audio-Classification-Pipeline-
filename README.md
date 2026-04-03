@@ -165,6 +165,7 @@ The log spectrogram was selected over Mel is because the audio data in this proj
 In addition, MFCCs were already included as a selected feature, and since MFCCs are themselves derived from the Mel spectrogram, using both could introduce overlapping information. Therefore, the log spectrogram was chosen instead because it provides a more direct and raw representation of the original spectral content, allowing the model to learn from less compressed frequency information.
 
 # Comparison Between Models
+To Choose which Model to use, 
 
-
+# Configuration and Settings
 # Conclusion
