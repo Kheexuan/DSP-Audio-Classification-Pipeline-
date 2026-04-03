@@ -1,4 +1,4 @@
-# CEG 3004 DSP Audio Classification Pipeline
+# CEG 3004 DSP Audio Classification Pipeline (Group 2)
 # Introduction
 The objective of this project is to develop a complete audio classification pipeline by applying digital signal processing techniques to audio data. These techniques are used to clean and preprocess the audio signals, reduce noise and unwanted distortions, and extract meaningful features that can better represent the important characteristics of the sound.
 
