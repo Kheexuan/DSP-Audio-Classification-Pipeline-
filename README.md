@@ -192,6 +192,13 @@ Logistic Regression performed reasonably well with the extracted features, achie
 
 Random Forest also performed fairly well with the extracted features, achieving an F1-score of 0.592. This indicates that the model was able to classify the audio samples with a moderate level of effectiveness, although its performance was lower than that of Logistic Regression. The result suggests that Random Forest was capable of capturing some of the underlying patterns in the dataset, but may not have been as well suited to the extracted features as Logistic Regression.
 
+## K-Nearest Neightbors
+<p align="center">
+<img width="329" height="736" alt="image" src="https://github.com/user-attachments/assets/0b6a75bd-3510-4529-826b-8952940118af" />
+</p>
+KNN did not perform particularly well with the extracted features, achieving an F1-score of only 0.438. This indicates that the model was less effective in distinguishing between the different audio classes compared to the better-performing models. One possible reason is that KNN relies heavily on the similarity or distance between samples in the feature space. In a dataset with more than 20 classes and a wide variety of sounds, the extracted features may not have formed tight and clearly separated clusters for each class.
+
+
 ## Result Conclusion
 Overall, Logistic Regression performed best because the extracted features were likely already strong enough to separate the audio classes without needing a highly complex model. Although the dataset contained diverse sounds such as engine motors, laughter, clapping, animal sounds, bottle opening, and helicopters, the feature extraction process appears to have captured the key differences between these categories effectively. As a result, Logistic Regression was able to learn the main patterns in the data and classify them more successfully than the other models.
 
@@ -200,4 +207,4 @@ In conclusion, this project successfully developed an audio classification pipel
 
 The selected features, including MFCC, spectral contrast, spectral centroid, spectral bandwidth, spectral rolloff, spectral flatness, zero-crossing rate, RMS, and log spectrogram, were able to capture important spectral, temporal, and energy-based properties of the audio. Additional analysis of difficult noise-like classes such as aeroplane and helicopter sounds also showed that a more targeted approach, including the use of low-pass filtering and spectral flatness conditions, could improve the representation of these challenging categories.
 
-Overall, Logistic Regression achieved the best overall performance among the three evaluated models, followed by Random Forest and SVM. This suggests that the extracted features were sufficiently informative and discriminative, allowing a simpler model to classify the sounds more effectively than the more complex alternatives.The findings show that strong preprocessing and carefully selected features can have a major impact on classification performance, and that for this dataset, a simpler classifier was the most suitable choice.
+Overall, Logistic Regression achieved the best overall performance among the four evaluated models, followed by Random Forest , KNN and SVM. This suggests that the extracted features were sufficiently informative and discriminative, allowing a simpler model to classify the sounds more effectively than the more complex alternatives.The findings show that strong preprocessing and carefully selected features can have a major impact on classification performance, and that for this dataset, a simpler classifier was the most suitable choice.
