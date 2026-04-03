@@ -177,22 +177,23 @@ The extracted features were tested on three different models: Support Vector Mac
 <p align="center">
 <img width="382" height="825" alt="image" src="https://github.com/user-attachments/assets/68a5f1cd-0244-4823-91f6-4a07dc01dca6" />
 </p>
-SVM did not perform very well with the extracted features with F1 accuracy of only 0.35
+SVM did not perform particularly well with the extracted features, achieving an F1-score of only 0.35. This suggests that the model had difficulty distinguishing between the different classes effectively. One possible reason is that the extracted features may not have been well suited to the decision boundaries formed by SVM, especially given the diverse nature of the dataset and the large number of classes involved. As a result, the model may have struggled to generalise well across the different sound categories.
 
 ## Logistic Regression
 <p align="center">
 <img width="378" height="843" alt="image" src="https://github.com/user-attachments/assets/50e2d45e-ebbc-4f4d-9587-69a2f0b9ad5f" />
 </p>
- Logistic Regression was decently with the extracted features with F1 accuracy of 0.674
+Logistic Regression performed reasonably well with the extracted features, achieving an F1-score of 0.674. This indicates that the model was able to classify the audio samples with a moderate level of effectiveness across the different classes. Compared to the other evaluated models, this result suggests that the extracted features were more compatible with Logistic Regression, allowing it to capture the key patterns in the dataset more effectively.
  
 ## Random Forest
 <p align="center">
-<img width="317" height="70" alt="image" src="https://github.com/user-attachments/assets/ddb20e7d-4071-435f-b64f-a0dca034975d" />
+<img width="320" height="752" alt="image" src="https://github.com/user-attachments/assets/a1928cf6-56c0-4a44-9760-d1ea43e2382f" />
 </p>
 
-Random Forest perform fairly decent as well with an F1 accuracy of 0.592
+Random Forest also performed fairly well with the extracted features, achieving an F1-score of 0.592. This indicates that the model was able to classify the audio samples with a moderate level of effectiveness, although its performance was lower than that of Logistic Regression. The result suggests that Random Forest was capable of capturing some of the underlying patterns in the dataset, but may not have been as well suited to the extracted features as Logistic Regression.
 
 ## Result Conclusion
+Overall, Logistic Regression performed best because the extracted features were likely already strong enough to separate the audio classes without needing a highly complex model. Although the dataset contained diverse sounds such as engine motors, laughter, clapping, animal sounds, bottle opening, and helicopters, the feature extraction process appears to have captured the key differences between these categories effectively. As a result, Logistic Regression was able to learn the main patterns in the data and classify them more successfully than the other models.
 
 # Configuration and Settings
 # Conclusion
