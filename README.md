@@ -165,7 +165,18 @@ The log spectrogram was selected over Mel is because the audio data in this proj
 In addition, MFCCs were already included as a selected feature, and since MFCCs are themselves derived from the Mel spectrogram, using both could introduce overlapping information. Therefore, the log spectrogram was chosen instead because it provides a more direct and raw representation of the original spectral content, allowing the model to learn from less compressed frequency information.
 
 # Comparison Between Models
-The extracted features were tested on 3 different model , SVM , logistic linearity 
+The extracted features were tested on three different models: Support Vector Machine (SVM), Logistic Regression, and Random Forest. Evaluating the same features across different models helps determine which model the extracted features are most suitable for and which produces the best overall performance.
+
+| Model | Benefits | Drawback |
+|------|------|------|
+| Support Vector Machine (SVM) | Works well with high-dimensional data such as extracted features. Effective for classification tasks with clear class boundaries.  | Can be slow to train on large datasets. Choosing the right kernel and parameters can be difficult |
+| Logistic Regression | Simple and Fast model to train. | Can be less accurate than more advanced models on complicated datasets |
+| Log Spectrogram | Handles non-linear relationships well. Works effectively with complex datasets  | Can be slower than Logistic Regression, especially with many trees.May require more computational resources |
+|------|------|------|
+| Log Melspectrogram | Emphasis On Human Hearing  | Not Selected |
+
+
+## SVM
 
 # Configuration and Settings
 # Conclusion
