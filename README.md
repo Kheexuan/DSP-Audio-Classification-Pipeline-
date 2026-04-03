@@ -83,6 +83,7 @@ Below are some of the functions available in librosa, arranged to support the de
 | Spectral Flatness | Sound more noisy or tone  | Selected |
 | Zero_Crossing | Times the signal crosses zero  | Selected |
 | Root Mean Square | Audio Segmentation  | Selected |
+| Log Spectrogram | Raw Spectrogram  | Selected |
 |------|------|------|
 | Log Melspectrogram | Emphasis On Human Hearing  | Not Selected |
 
@@ -96,11 +97,35 @@ Mel spectrogram was not selected mainly because it is designed to emphasise soun
 Based on the graphs above,it was noted that from around 4 to 6 kHz onwards, the frequency details in the Mel spectrogram became more compressed compared to a normal spectrogram. This compression reduces the resolution of the higher-frequency components, which may cause useful details to be less visible or less distinguishable. Since those higher-frequency regions could contain important features for classification, using a normal spectrogram was considered more suitable, as it preserves the frequency information more directly without reshaping it according to human auditory perception.
 
 ## MFCC:
-MFCC is alway used for machine learning , even though the graph might not be as easily understood by humans but machine works well with this data.
+Mel-Frequency Cepstral Coefficients (MFCCs) are widely used in audio and speech machine learning tasks because they provide a compact representation of the sound signal. Although MFCCs may not be the easiest for humans to interpret visually, they are highly effective for machine learning models as they capture the most important spectral characteristics of audio. For this reason, MFCC was selected as one of the key features.
 
+## Spectral Contrast:
+Spectral Contrast measures the difference in energy between peaks and valleys in the frequency spectrum. This helps describe the richness and texture of a sound by showing how much variation exists across different frequency bands. It was selected because this contrast can be useful in distinguishing between different types of audio signals.
 
+## Spectral Contrast:
+Spectral Centroid indicates where the centre sterngth of the spectrum lies, giving an idea of how bright or sharp a sound is. A higher centroid usually means the sound contains more high-frequency components, while a lower centroid suggests a darker or deeper sound. It was selected because it is useful in representing the overall distribution of energy in the spectrum.
 
+## Spectral Bandwidth:
+Spectral Bandwidth measures how spread out the frequencies are around the spectral centroid. In other words, it shows the range of frequencies present in the sound and whether the energy is concentrated or dispersed. It was selected because this spreading information helps describe the complexity and texture of the audio signal.
+
+## Spectral Rolloff
+Spectral Rolloff refers to the frequency below which most of the signal’s energy is concentrated. It is useful for identifying whether a sound is dominated by lower or higher frequencies. This feature was selected because it provides a simple but effective way to represent the distribution of spectral energy.
+
+## Spectral Flatness
+Spectral Flatness measures whether a sound is more noise-like or tone-like. A higher flatness value suggests the signal is more similar to noise, while a lower value indicates a more tonal or harmonic sound. It was selected because this feature helps differentiate between structured sounds and noisy signals.
+
+## Zero Crossing Rate
+Zero Crossing Rate counts how many times the audio signal crosses the zero amplitude line within a given time frame. This feature is often used to capture the noisiness or sharpness of a signal, as noisier sounds tend to cross zero more often. It was selected because it provides a simple and useful representation of signal behaviour over time.
+
+## Root Mean Square
+Root Mean Square (RMS) measures the average energy or loudness of an audio signal. It is commonly used in audio segmentation because it helps identify changes in intensity, such as silence, speech, or other sound events. It was selected because energy information is important for understanding the structure and dynamics of audio.
+
+## Log Spectrogram Over Log Mel Spectrogram
+The log spectrogram was selected over Mel is because the audio data in this project is not strongly dependent on speech-specific characteristics, where Mel-scaled features are usually most beneficial. The Mel scale is designed to place emphasis on human hearing, rather than preserving the full raw frequency detail of the signal. 
+
+In addition, MFCCs were already included as a selected feature, and since MFCCs are themselves derived from the Mel spectrogram, using both could introduce overlapping information. Therefore, the log spectrogram was chosen instead because it provides a more direct and raw representation of the original spectral content, allowing the model to learn from less compressed frequency information.
 
 # Comparison Between Models
+
 
 # Conclusion
