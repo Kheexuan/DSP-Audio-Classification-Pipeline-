@@ -76,7 +76,7 @@ This chapter was developed as additional findings emerged throughout the process
 It was observed that the system was unable to detect airplane and helicopter sounds effectively. These sound types are generally more noise-like and less structured than other audio classes, which may make them harder for the model to distinguish. This limitation led to further investigation into the characteristics of these sound categories in order to better understand why the model struggled and whether different features or approaches were needed to represent them more accurately.
 
 <p align="center">
-<img width="789" height="433" alt="image" src="https://github.com/user-attachments/assets/85eadbc6-d646-4ffe-ac32-5262bc47cd5c" />
+<img width="806" height="473" alt="image" src="https://github.com/user-attachments/assets/655592bf-7af6-46ae-8b3f-4ed690454380" />
 </p>
 To better understand the audio, examining only the spectrogram and time-domain waveform was not sufficient, as these representations did not reveal a very clear distinguishing characteristic for this type of sound. This is because most of the frequency range tends to be activated, making the audio appear broad and noise-like rather than showing a distinct pattern.
 
