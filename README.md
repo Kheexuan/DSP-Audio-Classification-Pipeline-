@@ -86,7 +86,7 @@ Root Mean Sqaure( RMS) was the better fit here as it adjusted the audio levels b
 DC offset is generally good to perform every single time. DC offset correcttion is performed to remove any constant bias in the aduio signal that shifts the waveform away from zero. This bias does not represent meaning full content and can interfere with signal processing task. Removing the DC offset ensures that the waveform is properly centred, allowing the extracted audio features to reflect the true characteristic of the sound more accurately.
 
 ## Pre-emphasis Filter Was Considered but Not Applied
-Pre-emphasis filter was considered but not utilised becuase the model was designed to classify many different types of sounds with varying charactertistic.
+Pre-emphasis filter was considered but not utilised because the model was designed to classify many different types of sounds with varying charactertistic.
 # Additional Processing
 This chapter was developed as additional findings emerged throughout the process, particularly when the model’s validation results were obtained.
 
