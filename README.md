@@ -69,6 +69,15 @@ The next issue encountered in the dataset was the presence of strong background 
 
 As a result, noise reduction became necessary to enhance the quality of the signal before training. By cleaning the audio and preserving the important section of the waveform, the model is better able to learn the relevant acoustic patterns, leading to more effective and reliable classification.
 
+## Root Mean Sqaure Normalisation Over Peak Normalisation
+Root Mean Sqaure( RMS) was the better fit here ass it adjusted the audio levels based on overall enegry of the signal rather than only affecting the highest amplitude values. RMS can resulty in a more consistent representation of perceived loudness.
+
+## DC offset
+DC offset is generally good to perform every single time. DC offset correcttion is performed to remove any constant bias in the aduio signal that shifts the waveform away from zero. This bias does not represent meaning full content and can interfere with signal processing task. Removing the DC offset ensures that the waveform is properly centred, allowing the extracted audio features to reflect the true characteristic of the sound more accurately.
+
+## Pre-emphasis Filter Was Considered but Not Applied
+Pre-emphasis filter was considered but not ulterlize becuase the model was designed to classify many different types of sounds with varying charactertistic.
+
 <p align="center">
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/6cd42ae1-9a2e-4461-acbe-8c66e593ec77" />
 </p>
