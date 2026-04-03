@@ -80,7 +80,7 @@ It was observed that the system was unable to detect airplane and helicopter sou
 </p>
 To better understand the audio, examining only the spectrogram and time-domain waveform was not sufficient, as these representations did not reveal a very clear distinguishing characteristic for this type of sound. This is because most of the frequency range tends to be activated, making the audio appear broad and noise-like rather than showing a distinct pattern.
 
-To address this, key audio features were extracted for further analysis. From this, it was observed that such sounds typically exhibit very low spectral flatness values, often below 0.01, and are mainly concentrated in the lower frequency range of approximately 0 to 600 Hz, as shown in the figure above.
+To address this, key audio features were extracted for further analysis such as the energy level and flatness. From this, it was observed that such sounds typically exhibit very low spectral flatness values, often below 0.01, and are mainly concentrated in the lower frequency range of approximately 0 to 600 Hz, as shown in the figure above.
 
 <p align="center">
 <img width="1243" height="484" alt="image" src="https://github.com/user-attachments/assets/cff048bc-7d25-48e1-bdb6-53da3a3a86c4" />
@@ -89,6 +89,11 @@ To confirm the analysis, the same observations were examined across both helicop
 
 In addition, most of the energy remains concentrated in the lower frequency range, with only a few higher frequency outliers. This suggests that these noisy sound classes share similar low-frequency and low-flatness characteristics, even though the exact distribution may vary slightly between them.
 
+## Low Pass Filter
+<p align="center">
+<img width="350" height="672" alt="image" src="https://github.com/user-attachments/assets/5816ac08-db20-41f5-b0c0-22eda687ea69" />
+</p>
+After these characteristics were identified, a low-pass filter was implemented to focus on frequencies below 1000 Hz, together with a threshold of 0.6 and a spectral flatness condition of less than 0.005. As shown in the figure above, this led to a significant improvement in both readings, as the system was now able to identify the sound correctly, whereas previously it had failed to detect it. This suggests that constraining the analysis to the lower-frequency region and applying stricter flatness-based conditions helped the model better capture the acoustic properties of this sound type.
 
 # Features Extraction
 https://librosa.org/doc/latest/feature.html
