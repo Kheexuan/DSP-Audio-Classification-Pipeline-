@@ -172,6 +172,7 @@ The extracted features were tested on three different models: Support Vector Mac
 | Support Vector Machine (SVM) | Works well with high-dimensional data such as extracted features. Effective for classification tasks with clear class boundaries.  | Can be slow to train on large datasets. Choosing the right kernel and parameters can be difficult |
 | Logistic Regression | Simple and Fast model to train. | Can be less accurate than more advanced models on complicated datasets |
 | Log Spectrogram | Handles non-linear relationships well. Works effectively with complex datasets  | Can be slower than Logistic Regression, especially with many trees.May require more computational resources |
+| K-Nearest Neightbors | Works well for classification when similar data points are close to each other in the feature space. | Performance depends heavily on the choice of K and the distance metric. Can perform poorly with high-dimensional data |
 
 ## SVM Results
 <p align="center">
